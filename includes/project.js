@@ -80,7 +80,7 @@ $().ready(function(){
             search + '&where=Красноярск&version=1.3&key=rusjdw2920';
         
 
-        var url = 'data.json';
+        //var url = 'data.json';
     
         $.getJSON(url, function (data) {
             console.log(data);
