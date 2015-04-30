@@ -2,7 +2,7 @@
 <html>
     <head>
         
-        <title>Owo-phone.js</title>
+        <title>2gis-phone</title>
         <meta content="width=device-width, initial-scale=0.5" name="viewport" />
 
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" media="screen" />
@@ -13,29 +13,34 @@
         <script src="lib/jstorage/jstorage.js"></script>
         <script src="lib/sip.js/dist/sip.js"></script>
 
-        <script src="includes/phone.js"></script>
-        <script src="includes/project.js"></script>
+        <script src="includes/phone.js"></script>        
 
     </head>
 
     <body>
-    <div class="container">
-        <div class="row" style="min-height:150px;">
-            <div class="col-md-4 col-md-offset-4">
-                
-            </div>
-        </div>
+    <div class="container">        
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-6 col-md-offset-1">
                 
+                <h4>2GIS Справочник</h4>
+
+                <input type="text" id="search" class="form-control col-md-1">
+                <a href="#" id="searchSubmit" class="btn btn-default">Поиск</a>
+
+
+                <div id="results"></div>
+            </div>
+
+            <div class="col-md-4">
+
                 <audio id="localAudio" style="display:none;"></audio>
 
                 <div class="well">
                     <div class="row">
                         <div class="col-md-12">
-                            <h3>Owo-phone.js</h3>
+                            <h3>2gis-phone</h3>
                             <span id="status"></span>
-                            <span id="registered"></span>
+                            <span id="registered"></spa>s
                             <div id="display"></div>
                             
                         </div>
@@ -66,9 +71,13 @@
                     
                 </div>
 
+
             </div>
         </div>
     </div>
+
+
+
 
 
     <!-- Modal -->
@@ -114,6 +123,6 @@
       </div>
     </div>
         
-
+    <script src="includes/project.js"></script>
     </body>
 </html>
