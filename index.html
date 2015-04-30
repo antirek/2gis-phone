@@ -22,13 +22,43 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-1">
                 
-                <h4>2GIS Справочник</h4>
 
-                <input type="text" id="search" class="form-control col-md-1">
-                <a href="#" id="searchSubmit" class="btn btn-default">Поиск</a>
+                <ul class="nav nav-tabs" role="tablist" id="myTab">
+                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Поиск</a></li>
+                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Личные</a></li>
+                  
+                </ul>
+
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="home">
+                    
+                    <h4>2GIS Справочник</h4>
+
+                    <input type="text" id="search" class="form-control col-md-1">
+                    <a href="#" id="searchSubmit" class="btn btn-default">Поиск</a>
 
 
-                <div id="results"></div>
+                    <div id="results"></div>
+
+
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="profile">
+                    
+                    <ul>                    
+                      <li>
+                        <a onclick="javascript:callPhone('89029802854');">Дорогая</a>
+                      </li>
+                      <li>
+                        <a onclick="javascript:callPhone('89135292926');">Я проверка</a>
+                      </li>
+                    </ul>
+
+                  </div>
+                  
+                </div>
+
+                
+                
             </div>
 
             <div class="col-md-4">
