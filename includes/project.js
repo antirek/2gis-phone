@@ -66,17 +66,21 @@ $().ready(function(){
         initPhone();      
     });
 
+    $("#clear").on('click', function(){
+        $("#results").html("");
+    });
+
     var startSearch = function () {
         var search = $("#search").val();
         $("#results").html("");
         //console.log(search)
 
-        
+        /*
         var url = 'http://catalog.api.2gis.ru/search?what=' + 
             search + '&where=Красноярск&version=1.3&key=rusjdw2920';
-        
+        */
 
-        //var url = 'data.json';
+        var url = 'data.json';
     
         $.getJSON(url, function (data) {
             console.log(data);
