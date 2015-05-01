@@ -92,7 +92,7 @@ $().ready(function(){
                 items.push( "<li id='res" + key + "'>" 
                     + val.name + ' '
                     + "<a onclick='javascript:showPhone(\""+ val.hash + "\",\"" + val.id +"\",\"res" + key + "\")'>"
-                    + 'показать телефон'
+                    + showPhoneTitle
                     + '</a>'
                     + "</li>");
             });
