@@ -3,7 +3,7 @@ var Phone = null;
 var showPhone = function (hash, id, li_id) {
     console.log(hash, id);
 
-    //var url = 'profile.json';
+    //var url = 'data/profile.json';
     
     
     var url = 'http://catalog.api.2gis.ru/profile?hash=' + 
@@ -80,7 +80,7 @@ $().ready(function(){
             search + '&where=Красноярск&version=1.3&key=rusjdw2920';
         
 
-        //var url = 'data.json';
+        //var url = 'data/list.json';
     
         $.getJSON(url, function (data) {
             console.log(data);
