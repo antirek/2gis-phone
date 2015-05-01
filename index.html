@@ -4,6 +4,7 @@
         
         <title>2gis-phone</title>
         <meta content="width=device-width, initial-scale=0.5" name="viewport" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" media="screen" />
 
@@ -14,33 +15,82 @@
         <script src="lib/sip.js/dist/sip.js"></script>
 
         <script src="includes/phone.js"></script>        
-
+        <script> 
+          var city = 'Красноярск';
+        </script>
+    
     </head>
 
     <body>
     <div class="container-fluid">        
         <div class="row">
-            <div class="col-md-6 col-xs-12 col-md-offset-1">
+            <div class="col-md-6 col-xs-12 col-md-offset-3">
                 
+                <div>
+                    <audio id="localAudio" style="display:none;"></audio>
+
+                
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>2gis-phone</h3>
+                            <span id="status"></span>
+                            <span id="registered"></spa>s
+                            <div id="display"></div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-inline" role="form">                                
+
+                                <input id="number" type="text" placeholder="Input phone number" class="search-query form-control">
+                                    
+                                <a id="call" class="btn btn-primary">
+                                    <i class="icon-plus-sign"></i>
+                                    Call
+                                </a>
+
+                                <a id="end" class="btn btn-danger" style="display:none;">
+                                    <i class="icon-plus-sign"></i>
+                                    End
+                                </a>
+
+                                <a href='' id="settings" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-cog"></span>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="height:10px;">
+                </div>
+
 
                 <ul class="nav nav-tabs" role="tablist" id="myTab">
                   <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Поиск</a></li>
                   <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Личные</a></li>
                   
                 </ul>
-
+                <br/>
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="home">
 
+                    <form class="form-inline">
+                      <span>Найти:</span>
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                        <input type="text" id="search" class="form-control col-md-1">
+                      </div>
+                      
+                      <a href="#" id="searchSubmit" class="btn btn-primary">Поиск</a>
+                    </form>
+
                     
-                    <h4>2GIS Справочник</h4>
+                    
+                    <br/>
 
-
-                    <input type="text" id="search" class="form-control col-md-1">
-                    <a href="#" id="searchSubmit" class="btn btn-primary">Поиск</a>
-
-
-                    <a href="#" id="clear" class="btn btn-default">Очистить результат</a>
+                    <a href="#" id="clear">Очистить результат</a>
                     <div id="results"></div>
 
 
@@ -65,44 +115,7 @@
             </div>
 
             <div class="col-md-4 col-xs-12">
-
-                <audio id="localAudio" style="display:none;"></audio>
-
-                <div class="well">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h3>2gis-phone</h3>
-                            <span id="status"></span>
-                            <span id="registered"></spa>s
-                            <div id="display"></div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-inline" role="form">                                
-
-                                <input id="number" type="text" placeholder="Input phone number" class="search-query form-control">
-                                    
-                                <a id="call" class="btn btn-primary">
-                                    <i class="icon-plus-sign"></i>
-                                    Call
-                                </a>
-
-                                <a id="end" class="btn btn-danger" style="display:none;">
-                                    <i class="icon-plus-sign"></i>
-                                    End
-                                </a>
-
-                                <a href='' id="settings" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-                                <span class="glyphicon glyphicon-cog"></span>
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+                
 
 
             </div>

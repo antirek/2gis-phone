@@ -77,11 +77,12 @@ $().ready(function(){
 
         
         var url = 'http://catalog.api.2gis.ru/search?what=' + 
-            search + '&where=Красноярск&version=1.3&key=rusjdw2920';
+            search + '&where=' + city + '&version=1.3&key=rusjdw2920';
         
+        console.log(url);
 
         //var url = 'data/list.json';
-    
+        
         $.getJSON(url, function (data) {
             console.log(data);
             var items = [];
@@ -100,7 +101,7 @@ $().ready(function(){
                 html: items.join("")
             }).appendTo( "#results" );            
         });
-
+        
     };
     
     $("#searchSubmit").on('click', startSearch);
